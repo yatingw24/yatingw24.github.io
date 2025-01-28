@@ -108,8 +108,30 @@
       }
 
       .tags {
-      margin-bottom: 1rem; /* Add spacing below the tags */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 0.5rem; /* Space between tags */
       }
+
+      .tag {
+        font-size: 0.85rem;
+        border-radius: 5px;
+        padding: 0.3rem 0.6rem;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .tag.is-light {
+        background-color: #E6F4EA; /* Light green */
+        color: #1B7F47; /* Dark green */
+      }
+
+      .tag.is-info.is-light {
+        background-color: #FEF6E7; /* Light orange */
+        color: #B5761B; /* Dark orange */
+      }
+
 
     </style>
     <title>Yating Wang's Portfolio</title>
