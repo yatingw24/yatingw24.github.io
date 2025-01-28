@@ -5,99 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
-    .content figure{
-      margin-left:0;
-      margin-right:0
-    }
-    
-    .a{
-      color:#20cebd16
-    }
-    
-    .hero a{
-      text-decoration:underline
-    }
+      .content figure {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .a {
+        color: #20cebd16;
+      }
+
+      .hero a {
+        text-decoration: underline;
+      }
+
+      .card {
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .card-content {
+        padding: 2rem;
+      }
+
+      .button {
+        background-color: #20cebd;
+        color: white;
+        font-weight: bold;
+      }
+
+      .button:hover {
+        background-color: #17b4a5;
+      }
+
+      .columns .column {
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        color: #555;
+      }
+      
+      .icon {
+        margin-right: 0.5rem;
+      }
+      
+      .icon-text {
+        display: inline-flex;
+        align-items: center;
+      }
     </style>
     <title>Yating Wang's Portfolio</title>
-
   </head>
   
 
   <body>
-    <section class="hero">
+    <section class="hero is-primary">
       <div class="container">
-          <div class="hero-body">
-              <h1 class="title is-1">
-                  <span class="icon-text">
-                      <span class="icon is-large">
-                          <i class="fas fa-pencil-alt"></i>
-                      </span>
-                  </span> Hi, I'm Yating Wang!
-              </h1>
-              <p class="subtitle is-4">
-                  <br>
-                  <span class="icon-text">
+        <div class="hero-body">
+          <h1 class="title is-1">
+            <span class="icon-text">
+              <span class="icon is-large">
+                <i class="fas fa-pencil-alt"></i>
+              </span>
+            </span> 
+            Hi, I'm Yating Wang!
+          </h1>
+          <p class="subtitle is-4">
+            <span class="icon-text">
+              <span class="icon is-large">
+                <a href="https://github.com/yatingw24"> <i class="fab fa-lg fa-github"></i></a>
+              </span>
+            </span>
+            <span class="icon-text">
+              <span class="icon is-large">
+                <a href="https://www.linkedin.com/in/yatingwang/"> <i class="fab fa-lg fa-linkedin"></i></a>
+              </span>
+            </span>
+            <span class="icon-text ">
+              <span class="icon is-large">
+                <a href="mailto:yatingw24@gmail.com"> <i class="far fa-paper-plane"></i></a>
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
 
-                      <span class="icon is-large">
-                          <a href="https://github.com/yatingw24"> <i class="fab fa-lg fa-github"></i></a>
-                      </span>
-                  </span>
+    <div class="container">
+      <section class="content">
+        <h1>About me</h1>
+        <h2>I'm Yating, a data journalist from Beijing, China, with a Bachelor’s degree in Communication and Psychology from Boston College. I specialize in data journalism covering local news, with a particular focus on mental health and arts and culture.</h2>
+      </section>
+    </div>
 
-                  <span class="icon-text">
-                      <span class="icon is-large">
-                          <a href= "https://www.linkedin.com/in/yatingwang/"> <i class="fab fa-lg fa-linkedin"></i></a>
-                      </span>
-                  </span>
-
-                  <span class="icon-text ">
-                      <span class="icon is-large">
-                          <a href="mailto:yatingw24@gmail.com"> <i class="far fa-paper-plane"></i></a>
-                      </span>
-                  </span>
-              </p>
-            </div>
-          </div>
+    <div class="container">
+      <section class="content">
+        <h1>Data Projects</h1>
       </section>
 
-      <div class="'container">
-        <section class="content">
-          <h1>About me</h1>
-          <h2>I'm Yating, a data journalist who hailed from Beijing, China. I held a Bachelor degree in Communication and Psychology from Boston College. As a data journalist, I cover local news with a specialized interested in mental health and arts and culture. </h2>
-        </section>
-      </div>
-
-      <div class="'container">
-        <section class="content">
-          <h1>Data Projects</h1>
-        </section>
-      </div>
-
-      <div class="'container">
-        <section class="content">
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
           <div class="card">
-            <h2><a href="https://theuptowner.org/hospital-plans-to-close-only-rehab-unit-serving-washington-heights-and-inwood/" target="_blank">Hospital Plans to Close Only Rehab Unit Serving Washington Heights and Inwood</a></h2>
-            <p>
-              A NewYork-Presbyterian/Columbia proposal to convert its 16-bed rehabilitation unit to general medical-surgical beds prompts dissent from residents, employees and former patients.</p>
-            <a href="https://github.com/yatingw24/marriage-age-web-interface" class="button">Check the Story</a>     
+            <div class="card-content">
+              <h2><a href="https://theuptowner.org/hospital-plans-to-close-only-rehab-unit-serving-washington-heights-and-inwood/" target="_blank">Hospital Plans to Close Only Rehab Unit Serving Washington Heights and Inwood</a></h2>
+              <p>A NewYork-Presbyterian/Columbia proposal to convert its 16-bed rehabilitation unit to general medical-surgical beds prompts dissent from residents, employees, and former patients.</p>
+              <a href="https://github.com/yatingw24/marriage-age-web-interface" class="button">Check the Story</a>     
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
 
-      <div class="'container">
-        <section class="content">
-          <h1>Reporting</h1>
-        </section>
-      </div>
-
-      <div class="'container">
-        <section class="content">
+        <div class="column is-one-third">
           <div class="card">
-            <h2><a href="https://a-project-about-ages-at-marriagegunicorn.onrender.com/" target="_blank">Age at First Marriage Across Countries</a></h2>
-            <p>an interactive web application to search for gender differences in terms of the age at first marriage.</p>
-            <a href="https://github.com/yatingw24/marriage-age-web-interface" class="button">Check the code</a>     
+            <div class="card-content">
+              <h2><a href="https://a-project-about-ages-at-marriagegunicorn.onrender.com/" target="_blank">Age at First Marriage Across Countries</a></h2>
+              <p>An interactive web application to explore gender differences in the age at first marriage across different countries.</p>
+              <a href="https://github.com/yatingw24/marriage-age-web-interface" class="button">Check the Code</a>     
+            </div>
           </div>
-        </section>
+        </div>
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <h2><a href="#" target="_blank">Your Project Title</a></h2>
+              <p>Description of your project here.</p>
+              <a href="#" class="button">Check the Story</a>     
+            </div>
+          </div>
+        </div>
       </div>
-</body>
+    </div>
+  </body>
 </html>
+
 
