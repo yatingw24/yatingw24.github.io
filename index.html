@@ -18,8 +18,7 @@
       }
 
       .body {
-    background-color: #e4f3fa5d; 
-    color: #fff; 
+      background-color: #e4f3fa5d;  
       }
 
       .card {
@@ -48,9 +47,10 @@
       }
 
       h1 {
-        font-size: 40px;
+        font-size: 50px;
         margin-bottom: 10px;
         font-family: 'Courier New', Courier, monospace;
+        text-align: center;
       }
 
       h3 {
@@ -59,13 +59,28 @@
         font-family: 'Courier New', Courier, monospace;
       }
       
-      .icon {
-        margin-right: 0.5rem;
-      }
-      
       .icon-text {
         display: inline-flex;
         align-items: center;
+      }
+
+      .icons {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem; /* Add spacing between icons */
+      }
+
+      .icons a {
+        color: #4a4a4a; /* Icon color */
+        transition: color 0.3s ease;
+      }
+
+      .icons a:hover {
+        color: #20cebd; /* Highlight color on hover */
+      }
+
+      .icons .icon {
+        font-size: 1.5rem; /* Size of icons */
       }
     </style>
     <title>Yating Wang's Portfolio</title>
