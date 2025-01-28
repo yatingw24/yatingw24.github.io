@@ -86,6 +86,14 @@
       .icons .icon {
         font-size: 1.5rem; /* Size of icons */
       }
+
+      .photo {
+    border-radius: 10px; /* Smooth, non-sharp corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Ensure the image fits the column width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the box neatly */
+  }
     </style>
     <title>Yating Wang's Portfolio</title>
   </head>
@@ -116,19 +124,25 @@
     <div class="container">
       <section class="content">
         <div class="columns is-vcentered">
-          <div class="column"></div>
+          <!-- Left Column: Photo -->
+          <div class="column is-one-third">
+            <figure class="image">
+              <img src="images/profile.JPG" alt="A professional photo of Yating Wang" class="photo">
+            </figure>
+          </div>
+    
+
+          <div class="column">
             <h3>About me</h3>
-            <p>I'm Yating, a data journalist from Beijing, China, with a Bachelor’s degree in Communication and Psychology from Boston College. I specialize in data journalism covering local news, with a particular focus on mental health and arts and culture.</p>
-
-        </div>
-
-        <div class="column is-one-third">
-          <figure class="image is-square">
-            <img src="images/profile.JPG" alt="A professional photo of Yating Wang">
-          </figure>
+            <p>
+              I'm Yating, a data journalist from Beijing, China, with a Bachelor’s degree in Communication and Psychology from Boston College. 
+              I specialize in data journalism covering local news, with a particular focus on mental health and arts and culture.
+            </p>
+          </div>
         </div>
       </section>
     </div>
+    
 
     <div class="container">
       <section class="content">
