@@ -12,17 +12,16 @@
         margin-right: 0;
       }
 
-
       .hero {
-      background-color: #f8f16c72; 
+        background-color: #f8f16c72; 
       }
-      
+
       .icons .icon {
-      font-size: 2.5rem; 
+        font-size: 2.5rem; 
       }
 
       .body {
-      background-color: #e4f3fa5d;  
+        background-color: #e4f3fa5d;  
       }
 
       .p {
@@ -34,6 +33,8 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         overflow: hidden;
+        width: 80%; /* Adjusted to make cards smaller */
+        margin: 0 auto; /* Centering cards */
       }
 
       .card-content {
@@ -46,6 +47,8 @@
 
       .columns .column {
         margin-bottom: 2rem;
+        display: flex;
+        justify-content: center; /* Ensures columns are centered */
       }
 
       h1 {
@@ -60,33 +63,30 @@
         color: #555;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin-top: 30px;
+        text-align: center; /* Centered heading */
       }
 
       p {
         font-size: 20px;
         color: #555;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center; /* Centered paragraph text */
       }
-
 
       .icons {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem; 
-      }
-
-      .icons a {
-        color: #4a4a4a; 
-        transition: color 0.3s ease;
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem; 
+        justify-content: center; /* Centered social icons */
       }
 
       .photo {
-      border-radius: 10px; 
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-      width: 70%; 
-      height: auto; 
-      object-fit: cover; 
-      margin: 0 auto;
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        width: 70%; 
+        height: auto; 
+        object-fit: cover; 
+        margin: 0 auto;
       }
 
       .tags {
@@ -94,6 +94,7 @@
         margin-bottom: 1rem;
         display: flex;
         gap: 0.5rem; /* Space between tags */
+        justify-content: center; /* Centered tags */
       }
 
       .tag {
@@ -103,7 +104,6 @@
         font-weight: 600;
         display: inline-block;
       }
-
 
     </style>
     <title>Yating Wang's Portfolio</title>
@@ -178,92 +178,70 @@
       <section class="content">
         <h3>Data Projects</h3>
 
-          <div class="columns is-multiline">
-            <div class="column is-one-third">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="images/X-Men.jpg" alt="An Analaysis about Female X-Men and Their Market Value">
-                  </figure>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="images/X-Men.jpg" alt="An Analaysis about Female X-Men and Their Market Value">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2><a href="https://yatingw24.github.io/X-men/" target="_blank">Female X-Men Remain a Legacy For Comic Fans</a></h2>
+                <p>A data-driven project analyzing the long-standing popularity of Jean Grey, aka the Dark Phoenix in X-Men.</p>
+                <div class="tags">
+                  <span class="is-light is-success tag">python/pandas/csv/regex</span>
+                  <span class="is-light is-warning tag">DataWrapper</span>
                 </div>
-                <div class="card-content">
-                  <h2><a href="https://yatingw24.github.io/X-men/" target="_blank">Female X-Men Remain a Legacy For Comic Fans</a></h2>
-                  <p>A data-driven project analyzing the long-standing popularity of Jean Grey, aka the Dark Phoenix in X-Men.</p>
-                  <div class="tags">
-                    <span class="is-light is-success tag">python/pandas/csv/regex</span>
-                    <span class="is-light is-warning tag">DataWrapper</span>
-                  </div>
-                  <a href="https://github.com/yatingw24/x-men" class="button is-danger is-small">Check the Code</a>
-                  <a href="https://yatingw24.github.io/X-men/" class="button is-small is-warning">Check the Story</a>   
-                </div>
+                <a href="https://github.com/yatingw24/x-men" class="button is-danger is-small">Check the Code</a>
+                <a href="https://yatingw24.github.io/X-men/" class="button is-small is-warning">Check the Story</a>   
               </div>
             </div>
-
-            <div class="column is-one-third">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="images/marrigae.jpg" alt="Description of the image">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <h2><a href="https://a-project-about-ages-at-marriagegunicorn.onrender.com/" target="_blank">Age at First Marriage Across Countries</a></h2>
-                  <p>An interactive web application to explore gender differences in the age at first marriage across different countries.</p>
-                  <div class="tags">
-                    <span class="is-light is-success tag">python/pandas/flask</span>
-                    <span class="is-light is-warning tag">interactive web app</span>
-                  </div>
-                  <a href="https://github.com/yatingw24/marriage-age-web-interface" class="button is-danger is-small">Check the Code</a>     
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-one-third">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="images/heavy_metal.jpg" alt="Description of the image">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <h2><a href="https://www.datawrapper.de/_/6JlHl/" target="_blank">Heavy Metal Detected in Consumer Products Imported From Top Manufacturing Countries.</a></h2>
-                  <p>A all-in-one chart unveils the most common type of consumer goods contaminated with heavy metals in NYC.</p>
-                  <div class="tags">
-                    <span class="is-light is-success tag">pivot table</span>
-                    <span class="is-light is-warning tag">DataWrapper</span>
-                    
-                  </div>
-                  <a href="https://www.datawrapper.de/_/6JlHl/" class="button">Take a Peek</a>     
-                </div>
-              </div>
-            </div>
-
-
-            <div class="column is-one-third">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="images/Film.jpg" alt="Description of the image">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <h2><a href="https://www.datawrapper.de/_/6JlHl/" target="_blank">More Films Directed = More Awards? Not Necessarily.</a></h2>
-                  <p>The number of films directed does not necessarily say something meaningful about a director’s reputation.</p>
-                  <div class="tags">
-                    <span class="is-light is-success tag">python/BeautifulSoup/pandas</span>
-                    <span class="is-light is-warning tag">Altair/ggplot/scatterplot</span>
-                    
-                  </div>
-                  <a href="https://github.com/yatingw24/directors_analysis" class="button is-danger is-small">Check the Code</a>  
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="images/marrigae.jpg" alt="Description of the image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2><a href="https://a-project-about-ages-at-marriagegunicorn.onrender.com/" target="_blank">Age at First Marriage Across Countries</a></h2>
+                <p>An interactive web application to explore gender differences in the age at first marriage across different countries.</p>
+                <div class="tags">
+                  <span class="is-light is-success tag">python/pandas/flask</span>
+                  <span class="is-light is-warning tag">interactive web app</span>
+                </div>
+                <a href="https://github.com/yatingw24/marriage-age-web-interface" class="button is-danger is-small">Check the Code</a>     
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="images/heavy_metal.jpg" alt="Description of the image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2><a href="https://www.datawrapper.de/_/6JlHl/" target="_blank">Heavy Metal Detected in Consumer Products Imported From Top Manufacturing Countries.</a></h2>
+                <p>A all-in-one chart unveils the most common type of consumer goods contaminated with heavy metals in NYC.</p>
+                <div class="tags">
+                  <span class="is-light is-success tag">pivot table</span>
+                  <span class="is-light is-warning tag">DataWrapper</span>
+                </div>
+                <a href="https://www.datawrapper.de/_/6JlHl/" class="button">Take a Peek</a>     
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
     </div>
     
-    
+
     <div class="container" id="reporting">
       <section class="content" id="reporting">
         <h3>Reporting</h3>
@@ -287,7 +265,7 @@
                 </div>
               </div>
             </div>
-        
+
             <div class="column is-one-third">
               <div class="card">
                 <div class="card-image">
@@ -326,7 +304,6 @@
               </div>
             </div>
 
-      
             <div class="column is-one-third">
               <div class="card">
                 <div class="card-image">
@@ -344,34 +321,13 @@
               </div>
             </div>
             
-
-            <div class="column is-one-third">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="images/Otto.jpg" alt="Description of the image">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <h2><a href="https://www.bcheights.com/2023/01/25/man-called-otto-review/" target="_blank">Through A Curmudgeon’s Lens, ‘A Man Called Otto’ Tackles Love and Loss</a></h2>
-                  <p>The movie, A Man Called Otto...</p>
-                  <div class="tags">
-                    <span class="is-light is-success tag">Arts and Culture/Film Review</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-
           </div>  
           
       </section>
     </div>
-
-    
-    
   </body>
 </html>
+
           
 
 
