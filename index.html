@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-      .content figure {
-        margin-left: 5;
-        margin-right: 5;
-      }
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <style>
       .hero {
         background-color: #f8f16c72; 
         text-align: center;
@@ -21,49 +24,34 @@
         font-size: 2.5rem; 
       }
 
-      .body {
-        background-color: #e4f3fa5d;  
+      body {
+        background-color: #e4f3fa5d;
+        padding: 2rem;
       }
 
-
-      .card {
-        margin-bottom: 1.5rem; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .card-content {
-        padding: 1rem;
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .content {
         margin-top: 40px;
       }
 
-
       .columns {
-        margin-left: -2rem;
-        margin-right: -2rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
       }
 
       .column {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        justify-content: center
+        padding: 1rem;
       }
-
 
       h1 {
         font-size: 50px;
         margin-bottom: 10px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
-      }
-
-      h2 {
-        font-size: 1.2rem; 
-        margin-bottom: 0.5rem;
       }
 
       h3 {
@@ -76,14 +64,6 @@
       p {
         font-size: 1rem;
         line-height: 1.4; 
-        text-align: left;
-      }
-
-      .icons {
-        margin-top: 1rem;
-        display: flex;
-        gap: 1rem; 
-        justify-content: center; 
       }
 
       .photo {
@@ -97,10 +77,9 @@
 
       .tags {
         margin-top: 1rem;
-        margin-bottom: 1rem;
         display: flex;
-        gap: 0.5rem; /* Space between tags */
-        justify-content: left; /* Centered tags */
+        flex-wrap: wrap;
+        gap: 0.5rem;
       }
 
       .tag {
@@ -108,10 +87,24 @@
         border-radius: 5px;
         padding: 0.3rem 0.6rem;
         font-weight: 600;
-        display: inline-block;
       }
 
+      .card {
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .card-content {
+        padding: 1rem;
+      }
+
+      .about-me-text {
+        max-width: 600px;
+      }
     </style>
+
     <title>Yating Wang's Portfolio</title>
   </head>
   
@@ -162,14 +155,14 @@
     <div class="container" id="about-me">
       <section class="content">
         <div class="columns is-vcentered">
-          <div class="column">
-            <h3>About me</h3>
-            <p>
-              I'm Yating, a data journalist from Beijing, China. I held a Bachelor degree in Communication and Psychology from Boston College. Fluent in mulptiple programming languages and data visualization tools, I cover local news with a particular focus on health and arts and culture through the lens of data and  reporting. 
-            </p>
-          </div>
+            <div class="column is-two-thirds about-me-text">
+                <h3>About Me</h3>
+                <p>
+                  I'm Yating, a data journalist from Beijing, China. I hold a Bachelor's degree in Communication and Psychology from Boston College. Fluent in multiple programming languages and data visualization tools, I cover local news with a particular focus on health, arts, and culture through the lens of data and reporting.
+                </p>
+            </div>
 
-          <div class="column is-one-third">
+         <div class="column is-one-third">
             <figure class="image is-size-4">
               <img src="images/profile.png" alt="A professional photo of Yating Wang" class="photo">
             </figure>
@@ -197,7 +190,6 @@
                   <p class="title is-4"><a href="https://yatingw24.github.io/phd/">Female X-Men Remain a Legacy For Comic Fans</a></p>
                   <p class="subtitle is-6">A data-driven project analyzing the long-standing popularity of Jean Grey, aka the Dark Phoenix in X-Men.</p>
                 </div>
-              </div>
                 <div class="tags">
                   <span class="tag is-success is-light is-rounded">Python/Pandas</span>
                   <span class="tag is-warning is-light is-rounded">csv</span>
