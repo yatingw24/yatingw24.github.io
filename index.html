@@ -8,7 +8,6 @@
 
     <style>
       .hero {
-        background-color: #f8f16c72; 
         text-align: center;
       }
 
@@ -17,7 +16,7 @@
       }
 
       body {
-        background-color: #e4f3fa5d;
+        background-color: #faf9f35d;
         padding: 2rem;
       }
 
@@ -43,19 +42,26 @@
       h1 {
         font-size: 50px;
         margin-bottom: 10px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Times New Roman', Times, serif;
         text-align: center;
       }
 
       h3 {
         font-size: 35px;
         color: #555;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Times New Roman', Times, serif;
         margin-top: 30px;
       }
 
+      subtitle {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.4;
+        margin-bottom: 30px;
+      }
+
       p {
-        font-size: 1rem;
+        font-size: 20px;
         line-height: 1.4; 
       }
 
@@ -67,7 +73,6 @@
         object-fit: cover; 
         margin: 0 auto;
       }
-
 
       .tags {
         margin-top: 1rem;
@@ -94,10 +99,13 @@
         padding: 1rem;
       }
 
-      .about-me-text {
+      .hr {
+        margin: 1rem 0;
+        color: grey;
+        border: 0;
+        border-top: 1px solid;
+        opacity: .25;
         max-width: 600px;
-        margin: 0 auto;
-        text-align: left; 
       }
     </style>
 
@@ -110,8 +118,10 @@
       <div class="container">
 
         <div class="hero-body">
-          <h1 class="title is-1">Hi, I'm Yating Wang!</h1>
-          <p class="subtitle is-4">Data Journalist | Storyteller | Book Lover</p>
+          <h1 class="title is-1">Hello, I'm Yating Wang!</h1>
+          <subtitle>I am a data journalist who writes, codes and makes cool charts.
+          </subtitle>
+          <subtitle>I hold a Master's in Data Journalism from Columbia Journalism School. I cover local news with focus on health, arts, and culture through the lens of data and reporting</subtitle>
           <div class="icons">
             <a href="https://github.com/yatingw24" target="_blank" class="icon is-large">
               <i class="fab fa-github"></i>
@@ -123,37 +133,15 @@
               <i class="fas fa-envelope"></i>
             </a>
           </div>
-        
         </div>
-
 
       </div>
     </section>
-    
-
-    <div class="container" id="about-me">
-      <section class="content">
-        <div class="columns is-vcentered is-flex is-justify-content-center">
-          <div class="column is-half">
-            <h3>About Me</h3>
-            <p>
-              I'm Yating, a data journalist from Beijing, China. I hold a Bachelor's degree in Communication and Psychology from Boston College. Based in NYC, I cover local news with a particular focus on health, arts, and culture through the lens of data and reporting.
-            </p>
-          </div>
-          <div class="column is-one-third is-flex is-justify-content-center">
-            <figure class="image is-256x256">
-              <img src="images/profile.png" alt="A professional photo of Yating Wang" class="photo">
-            </figure>
-          </div>
-        </div>
-      </section>
-    </div>
-    
-    
+    <hr>
 
     <div class="container" id="data-projects">
       <section class="content">
-        <h3>Data & Reporting</h3>
+        <h3>Data Project</h3>
 
         <div class="columns is-multiline">
           <div class="column is-one-third">
@@ -182,34 +170,6 @@
             </div>
           </div>
 
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/directors.jpg" alt="A data story on gender inequality among directors">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/directors/">Can Women Make Hollywood Blockbusters?</a></p>
-                  <p class="subtitle is-6">A deep data investigation into the performance of female- and male-directed films</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">Python/Pandas</span>
-                  <span class="tag is-sucess is-light is-rounded">ai2html/RAWGraph/Datawrapper</span>
-                  <span class="tag is-warning is-light is-rounded">BeautifulSoup</span>
-                  <span class="tag is-light is-rounded">R</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://yatingw24.github.io/directors" class="card-footer-item">Story</a>
-                <a href="https://github.com/yatingw24/directors" class="card-footer-item">Code</a>
-              </footer>  
-            </div>
-          </div>
-
-
           <div class="column is-one-third">
             <div class="card">
               <div class="card-image">
@@ -220,7 +180,7 @@
               <div class="card-content">
                 <div class="media-content">
                   <p class="title is-4"><a href="https://yatingw24.github.io/food_recall/">Labeling Errors Became Leading Causes of Food Recalls</a></p>
-                  <p class="subtitle is-6">Food recall has never been this violent with labeling issues leading Class I food recalls, data from the US Food and Drug Administration reveals.</p>
+                  <p class="subtitle is-6">Food recall has never been this violent with labeling issues leading Class I food recalls, data from FDA reveals.</p>
                 </div>
                 <div class="tags">
                   <span class="tag is-success is-light is-rounded">Python/Pandas</span>
@@ -260,6 +220,33 @@
               <footer class="card-footer">
                 <a href="https://yatingw24.github.io/phd/" class="card-footer-item">Story</a>
                 <a href="https://github.com/yatingw24/phd" class="card-footer-item">Code</a>
+              </footer>  
+            </div>
+          </div>
+
+
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="images/directors.jpg" alt="A data story on gender inequality among directors">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4"><a href="https://yatingw24.github.io/directors/">Can Women Make Hollywood Blockbusters?</a></p>
+                  <p class="subtitle is-6">A deep data investigation into the performance of female- and male-directed films</p>
+                </div>
+                <div class="tags">
+                  <span class="tag is-success is-light is-rounded">Python/Pandas</span>
+                  <span class="tag is-sucess is-light is-rounded">ai2html/RAWGraph/Datawrapper</span>
+                  <span class="tag is-warning is-light is-rounded">BeautifulSoup</span>
+                  <span class="tag is-light is-rounded">R</span>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="https://yatingw24.github.io/directors" class="card-footer-item">Story</a>
+                <a href="https://github.com/yatingw24/directors" class="card-footer-item">Code</a>
               </footer>  
             </div>
           </div>
@@ -365,7 +352,14 @@
               
             </div>
           </div>
-
+            
+        </div>  
+          
+      </section>
+    
+      <section class="content">
+        <h3>Reporting</h3>
+        <div class="columns is-multiline">
 
           <div class="column is-one-third">
             <div class="card">
@@ -388,11 +382,9 @@
               <footer class="card-footer">
                 <a href="https://theuptowner.org/harlem-group-continues-to-oppose-columbias-expansion/" class="card-footer-item">Story</a>
               </footer>
-
-
             </div>
           </div>
-      
+
           <div class="column is-one-third">
             <div class="card">
               <div class="card-image">
@@ -437,13 +429,13 @@
               <footer class="card-footer">
                 <a href="https://www.bcheights.com/2023/02/12/saint-omer-review/" class="card-footer-item">Story</a>
               </footer>
-
-
             </div>
-          </div>
-            
-        </div>  
-          
+        </div>
+
+      </section>
+
+      <section class="content">
+        <h3>Visual</h3>
       </section>
     </div>
   </body>
