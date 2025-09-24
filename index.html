@@ -30,14 +30,14 @@
       }
 
       body {
-        background-color: #faf9f35d;
+        background-color: white;
         padding: 2rem;
         font-family: 'Lora', serif;
         margin: 0;
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 1000px;
         margin: 0 auto;
       }
 
@@ -90,7 +90,7 @@
       }
 
       h3 {
-        font-size: 35px;
+        font-size: 24px;
         color: #555;
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
@@ -104,6 +104,7 @@
       p {
         font-size: 20px;
         line-height: 1.4; 
+        color:#555;
       }
 
       /* Custom Grid System */
@@ -114,15 +115,15 @@
         margin-top: 2rem;
       }
 
-      /* Custom Card Styles - NO BULMA */
       .card {
         background: white;
-        border-radius: 12px;
+        border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         display: flex;
         flex-direction: column;
+        height: 500px;
       }
 
       .card:hover {
@@ -132,7 +133,7 @@
 
       .card-image {
         width: 100%;
-        height: 200px;
+        height: 400px;
         overflow: hidden;
         margin: 0;
         padding: 0;
@@ -145,13 +146,10 @@
         object-fit: cover;
         object-position: center;
         display: block;
-        margin: 0;
-        padding: 0;
-        border: none;
       }
 
       .card-content {
-        padding: 1.5rem;
+        padding: 1rem;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -160,8 +158,8 @@
       .card-title {
         font-size: 1.25rem;
         font-weight: 600;
-        margin-bottom: 0.5rem;
         font-family: 'Open Sans', sans-serif;
+        margin-bottom: 0;
       }
 
       .card-title a {
@@ -174,11 +172,11 @@
       }
 
       .card-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         color: #666;
-        margin-bottom: 1rem;
         line-height: 1.4;
         flex: 1;
+        margin-bottom: 0;
       }
 
       .tags {
@@ -317,15 +315,14 @@
         <div class="grid">
           <div class="card">
             <div class="card-image">
-              <img src="images/pork_line.png" alt="A data story on the U.S. pork export in the Trump era">
+              <img src="images/pork_line.jpg" alt="A data story on the U.S. pork export in the Trump era">
             </div>
             <div class="card-content">
               <p class="card-title"><a href="https://yatingw24.github.io/exports/">As China's Demand Fades, U.S. Pork Has Few Places Left to Turn</a></p>
               <p class="card-subtitle">While swine lean meat finds new markets, offals like pig feet have nowhere to go in the U.S.</p>
               <div class="tags">
                 <span class="tag success">Python/Pandas/regex</span>
-                <span class="tag success">ai2html</span>
-                <span class="tag warning">csv</span>
+                <span class="tag link">ai2html</span>
               </div>
             </div>
             <div class="card-footer">
@@ -343,10 +340,8 @@
               <p class="card-subtitle">Food recall has never been this violent with labeling issues leading Class I food recalls, data from FDA reveals.</p>
               <div class="tags">
                 <span class="tag success">Python/Pandas</span>
-                <span class="tag success">ai2html</span>
-                <span class="tag">regex</span>
                 <span class="tag link">R/ggplot</span>
-                <span class="tag link">Illustrator</span>
+                <span class="tag">Illustrator</span>
               </div>
             </div>
             <div class="card-footer">
@@ -357,16 +352,14 @@
 
           <div class="card">
             <div class="card-image">
-              <img src="https://via.placeholder.com/400x200/9b59b6/ffffff?text=Directors" alt="A data story on gender inequality among directors">
+              <img src="images/directors.jpg" alt="A data story on gender inequality among directors">
             </div>
             <div class="card-content">
               <p class="card-title"><a href="https://yatingw24.github.io/directors/">Can Women Make Hollywood Blockbusters?</a></p>
               <p class="card-subtitle">A deep data investigation into the performance of female- and male-directed films</p>
               <div class="tags">
-                <span class="tag success">Python/Pandas</span>
-                <span class="tag success">ai2html/RAWGraph/Datawrapper</span>
+                <span class="tag success">RAWGraph/Datawrapper/R</span>
                 <span class="tag warning">BeautifulSoup</span>
-                <span class="tag">R</span>
               </div>
             </div>
             <div class="card-footer">
@@ -377,15 +370,14 @@
 
           <div class="card">
             <div class="card-image">
-              <img src="https://via.placeholder.com/400x300/f39c12/ffffff?text=X-Men" alt="An Analysis about Female X-Men and Their Market Value">
+              <img src="images/X-Men.jpg" alt="An Analysis about Female X-Men and Their Market Value">
             </div>
             <div class="card-content">
               <p class="card-title"><a href="https://yatingw24.github.io/X-men/">Female X-Men Remain a Legacy For Comic Fans</a></p>
               <p class="card-subtitle">A data-driven project analyzing the long-standing popularity of Jean Grey, aka the Dark Phoenix in X-Men.</p>
               <div class="tags">
-                <span class="tag success">Python/Pandas</span>
+                <span class="tag success">Python</span>
                 <span class="tag warning">csv</span>
-                <span class="tag">regex</span>
                 <span class="tag link">Datawrapper</span>
               </div>
             </div>
@@ -397,15 +389,13 @@
 
           <div class="card">
             <div class="card-image">
-              <img src="https://via.placeholder.com/400x250/27ae60/ffffff?text=Trade+Policy" alt="American Consumers Cannot Afford Trump's Trade Policy">
+              <img src="images/pie.png" alt="American Consumers Cannot Afford Trump's Trade Policy">
             </div>
             <div class="card-content">
               <p class="card-title"><a href="https://yatingw24.github.io/tariff800/">American Consumers Cannot Afford Trump's Trade Policy any Longer</a></p>
               <p class="card-subtitle">A dive into how revocation of de minimis exemption affects those who can least afford.</p>
               <div class="tags">
-                <span class="tag success">foreign affairs</span>
                 <span class="tag warning">xml</span>
-                <span class="tag">politics</span>
                 <span class="tag link">Datawrapper</span>
               </div>
             </div>
@@ -417,16 +407,16 @@
       </section>
 
       <section class="content">
-        <h3>Visual Reporting using <span class="verb-bold">Datawrapper/Rawgraphs/R Studio/D3</span> and <span class="verb-bold">cleaned in Illustrator</span>.</h3>
+        <h3>Visual Reporting using <span class="verb-bold">Datawrapper, Rawgraphs, R Studio, D3 and more</span>.</h3>
 
         <div class="grid">
           <div class="card">
             <div class="card-image">
-              <img src="https://via.placeholder.com/400x300/8e44ad/ffffff?text=PhD+Students" alt="An Analysis about Underpaid PhD Students">
+              <img src="images/statemap.jpg" alt="An Analysis about Underpaid PhD Students">
             </div>
             <div class="card-content">
               <p class="card-title"><a href="https://yatingw24.github.io/phd_map/">The Silent Crisis of Non-Stem PhD Students</a></p>
-              <p class="card-subtitle">A visual story about the financial hardship of PhD students in Non-traditional science disciplines.</p>
+              <p class="card-subtitle">I created an interactive map that shows the stipend gap within the same phd discipline due to geographical factors.</p>
               <div class="tags">
                 <span class="tag success">topoJson</span>
                 <span class="tag warning">D3</span>
@@ -435,6 +425,53 @@
           </div>
         </div>
       </section>
+
+      <section class="content">
+        <h3>Original pieces that I <span class="verb-bold">wrote</span> and <span class="verb-bold">reported.</span></h3>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/harlem.jpg" alt="Harlem Group Continues to Oppose Columbia's Expansion">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://theuptowner.org/harlem-group-continues-to-oppose-columbias-expansion/" target="_blank">Harlem Group Continues to Oppose Columbia's Expansion</a></p>
+              <p class="card-subtitle">At a community action meeting, West Harlem activists discuss potential actions to stop further development.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="images/NYP.jpg" alt="Hospital Plans to Close Only Rehab Unit">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://theuptowner.org/hospital-plans-to-close-only-rehab-unit-serving-washington-heights-and-inwood/" target="_blank">Hospital Plans to Close Only Rehab Unit Serving Washington Heights and Inwood</a></p>
+              <p class="card-subtitle">A NewYork-Presbyterian proposal to convert its 16-bed rehabilitation unit to general medical-surgical beds prompts dissent.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="images/Saint_omer.jpg" alt="Saint Omer Movie Review">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://www.bcheights.com/2023/02/12/saint-omer-review/" target="_blank">'Saint Omer' Touches on Motherhood's Complicated Nature</a></p>
+              <p class="card-subtitle">A movie review on a semi-documentary French production nominated for Best International Feature Film at the 95th Academy Awards.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="images/apple.jpg" alt="Apple's Software Strategy">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/Apple/" target="_blank">How Apple's Software Strategy Leaves Users Behind</a></p>
+              <p class="card-subtitle">A commentary on Apple's planned obsolescence in the guise of a concern for user privacy.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>
