@@ -3,16 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       .icons .icon {
         font-size: 2.5rem; 
         margin-right: 1rem;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .icons .icon:hover {
+        color: #666;
       }
 
       .icons {
@@ -24,6 +33,7 @@
         background-color: #faf9f35d;
         padding: 2rem;
         font-family: 'Lora', serif;
+        margin: 0;
       }
 
       .container {
@@ -35,15 +45,6 @@
         margin-top: 40px;
       }
 
-      .columns {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-      }
-
-      .column {
-        padding: 0.5rem;
-      }
-
       /* Profile photo styles */
       .profile-photo {
         width: 200px;
@@ -53,7 +54,7 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
 
-      /* Side-by-side layout for hero section */
+      /* Hero section */
       .hero-side-by-side {
         display: flex;
         flex-wrap: wrap;
@@ -105,6 +106,81 @@
         line-height: 1.4; 
       }
 
+      /* Custom Grid System */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      /* Custom Card Styles - NO BULMA */
+      .card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .card-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .card-title a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .card-title a:hover {
+        color: darkred;
+      }
+
+      .card-subtitle {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        flex: 1;
+      }
+
       .tags {
         margin-top: 1rem;
         display: flex;
@@ -113,21 +189,52 @@
       }
 
       .tag {
-        font-size: 0.85rem;
-        border-radius: 5px;
-        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+        border-radius: 20px;
+        padding: 0.3rem 0.8rem;
         font-weight: 600;
+        border: none;
+        background: #e3f2fd;
+        color: #1976d2;
       }
 
-      .card {
-        margin-bottom: 1rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
+      .tag.success {
+        background: #e8f5e8;
+        color: #2e7d32;
       }
 
-      .card-content {
+      .tag.warning {
+        background: #fff3e0;
+        color: #f57c00;
+      }
+
+      .tag.link {
+        background: #f3e5f5;
+        color: #7b1fa2;
+      }
+
+      .card-footer {
+        border-top: 1px solid #eee;
+        display: flex;
+      }
+
+      .card-footer-item {
+        flex: 1;
         padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: #666;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+      }
+
+      .card-footer-item:hover {
+        background-color: #f5f5f5;
+        color: darkred;
+      }
+
+      .card-footer-item:not(:last-child) {
+        border-right: 1px solid #eee;
       }
 
       .hr {
@@ -138,7 +245,6 @@
         opacity: .25;
         max-width: 600px;
       }
-
 
       /* Responsive adjustments */
       @media (max-width: 768px) {
@@ -154,12 +260,24 @@
         .icons .icon {
           margin: 0 0.5rem;
         }
+
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        h3 {
+          font-size: 28px;
+        }
+
+        body {
+          padding: 1rem;
+        }
       }
     </style>
 
     <title>Yating Wang's Portfolio</title>
 </head>
-
 
 <body>
     <section class="hero">
@@ -171,13 +289,13 @@
                 <p>Hello! I'm Yating Wang, a data journalist who writes, codes and makes graphics to uncover stories that matter to the communities. Trained at Columbia Journalism School, I specialize in gathering and analyzing data to cover local policy, higher education, and U.S.-China trade dynamics.</p>
                 <p>When not coding or reporting, you'll find me buried in books.</p>  
                 <div class="icons">
-                  <a href="https://github.com/yatingw24" target="_blank" class="icon is-large">
+                  <a href="https://github.com/yatingw24" target="_blank" class="icon">
                     <i class="fab fa-github"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/yating-w-abb438221/" target="_blank" class="icon is-large">
+                  <a href="https://www.linkedin.com/in/yating-w-abb438221/" target="_blank" class="icon">
                     <i class="fab fa-linkedin"></i>
                   </a>
-                  <a href="mailto:yatingw24@gmail.com" class="icon is-large">
+                  <a href="mailto:yatingw24@gmail.com" class="icon">
                     <i class="fas fa-envelope"></i>
                   </a>
                 </div>
@@ -195,271 +313,128 @@
     <div class="container">
       <section class="content">
         <h3>Take a look at my best data projects, where I <span class="verb-bold">gathered</span>, <span class="verb-bold">scraped</span> and <span class="verb-bold">analyzed</span> data.</h3>
-        <h3></h3>
 
-        <div class="columns is-multiline">
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/pork_line.png" alt="A data story on the U.S. pork export in the Trump era">
-                </figure>
+        <div class="grid">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/pork_line.png" alt="A data story on the U.S. pork export in the Trump era">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/exports/">As China's Demand Fades, U.S. Pork Has Few Places Left to Turn</a></p>
+              <p class="card-subtitle">While swine lean meat finds new markets, offals like pig feet have nowhere to go in the U.S.</p>
+              <div class="tags">
+                <span class="tag success">Python/Pandas/regex</span>
+                <span class="tag success">ai2html</span>
+                <span class="tag warning">csv</span>
               </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/exports/">As China’s Demand Fades, U.S. Pork Has Few Places Left to Turn</a></p>
-                  <p class="subtitle is-6">While swine lean meat finds new markets, offals like pig feet have nowhere to go in the U.S.</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">Python/Pandas/regex</span>
-                  <span class="tag is-sucess is-light is-rounded">ai2html</span>
-                  <span class="tag is-warning is-light is-rounded">csv</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://yatingw24.github.io/exports" class="card-footer-item">Story</a>
-                <a href="https://github.com/yatingw24/exports" class="card-footer-item">Code</a>
-              </footer>  
+            </div>
+            <div class="card-footer">
+              <a href="https://yatingw24.github.io/exports" class="card-footer-item">Story</a>
+              <a href="https://github.com/yatingw24/exports" class="card-footer-item">Code</a>
             </div>
           </div>
 
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image">
-                  <img src="images/tile.png" alt="A data story on leading causes of food recalls">
-                </figure>
+          <div class="card">
+            <div class="card-image">
+              <img src="images/tile.png" alt="A data story on leading causes of food recalls">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/food_recall/">Labeling Errors Became Leading Causes of Food Recalls</a></p>
+              <p class="card-subtitle">Food recall has never been this violent with labeling issues leading Class I food recalls, data from FDA reveals.</p>
+              <div class="tags">
+                <span class="tag success">Python/Pandas</span>
+                <span class="tag success">ai2html</span>
+                <span class="tag">regex</span>
+                <span class="tag link">R/ggplot</span>
+                <span class="tag link">Illustrator</span>
               </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/food_recall/">Labeling Errors Became Leading Causes of Food Recalls</a></p>
-                  <p class="subtitle is-6">Food recall has never been this violent with labeling issues leading Class I food recalls, data from FDA reveals.</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">Python/Pandas</span>
-                  <span class="tag is-sucess is-light is-rounded">ai2html</span>
-                  <span class="tag is-light is-rounded">regex</span>
-                  <span class="tag is-link is-light is-rounded">R/ggplot</span>
-                  <span class="tag is-link is-light is-rounded">Illustrator</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://yatingw24.github.io/food_recall" class="card-footer-item">Story</a>
-                <a href="https://github.com/yatingw24/food_recall" class="card-footer-item">Code</a>
-              </footer>  
+            </div>
+            <div class="card-footer">
+              <a href="https://yatingw24.github.io/food_recall" class="card-footer-item">Story</a>
+              <a href="https://github.com/yatingw24/food_recall" class="card-footer-item">Code</a>
             </div>
           </div>
 
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/directors.jpg" alt="A data story on gender inequality among directors">
-                </figure>
+          <div class="card">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/400x200/9b59b6/ffffff?text=Directors" alt="A data story on gender inequality among directors">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/directors/">Can Women Make Hollywood Blockbusters?</a></p>
+              <p class="card-subtitle">A deep data investigation into the performance of female- and male-directed films</p>
+              <div class="tags">
+                <span class="tag success">Python/Pandas</span>
+                <span class="tag success">ai2html/RAWGraph/Datawrapper</span>
+                <span class="tag warning">BeautifulSoup</span>
+                <span class="tag">R</span>
               </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/directors/">Can Women Make Hollywood Blockbusters?</a></p>
-                  <p class="subtitle is-6">A deep data investigation into the performance of female- and male-directed films</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">Python/Pandas</span>
-                  <span class="tag is-sucess is-light is-rounded">ai2html/RAWGraph/Datawrapper</span>
-                  <span class="tag is-warning is-light is-rounded">BeautifulSoup</span>
-                  <span class="tag is-light is-rounded">R</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://yatingw24.github.io/directors" class="card-footer-item">Story</a>
-                <a href="https://github.com/yatingw24/directors" class="card-footer-item">Code</a>
-              </footer>  
+            </div>
+            <div class="card-footer">
+              <a href="https://yatingw24.github.io/directors" class="card-footer-item">Story</a>
+              <a href="https://github.com/yatingw24/directors" class="card-footer-item">Code</a>
             </div>
           </div>
 
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/X-Men.jpg" alt="An Analaysis about Female X-Men and Their Market Value">
-                </figure>
+          <div class="card">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/400x300/f39c12/ffffff?text=X-Men" alt="An Analysis about Female X-Men and Their Market Value">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/X-men/">Female X-Men Remain a Legacy For Comic Fans</a></p>
+              <p class="card-subtitle">A data-driven project analyzing the long-standing popularity of Jean Grey, aka the Dark Phoenix in X-Men.</p>
+              <div class="tags">
+                <span class="tag success">Python/Pandas</span>
+                <span class="tag warning">csv</span>
+                <span class="tag">regex</span>
+                <span class="tag link">Datawrapper</span>
               </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/X-men/" target="_blank">Female X-Men Remain a Legacy For Comic Fans</a></p>
-                  <p class="subtitle is-6">A data-driven project analyzing the long-standing popularity of Jean Grey, aka the Dark Phoenix in X-Men.</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">Python/Pandas</span>
-                  <span class="tag is-warning is-light is-rounded">csv</span>
-                  <span class="tag is-light is-rounded">regex</span>
-                  <span class="tag is-link is-light is-rounded">Datawrapper</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://yatingw24.github.io/X-men/" class="card-footer-item">Story</a>
-                <a href="https://github.com/yatingw24/x-men" class="card-footer-item">Code</a>
-              </footer> 
-              
+            </div>
+            <div class="card-footer">
+              <a href="https://yatingw24.github.io/X-men/" class="card-footer-item">Story</a>
+              <a href="https://github.com/yatingw24/x-men" class="card-footer-item">Code</a>
             </div>
           </div>
 
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/pie.png">
-                </figure>
-      
+          <div class="card">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/400x250/27ae60/ffffff?text=Trade+Policy" alt="American Consumers Cannot Afford Trump's Trade Policy">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/tariff800/">American Consumers Cannot Afford Trump's Trade Policy any Longer</a></p>
+              <p class="card-subtitle">A dive into how revocation of de minimis exemption affects those who can least afford.</p>
+              <div class="tags">
+                <span class="tag success">foreign affairs</span>
+                <span class="tag warning">xml</span>
+                <span class="tag">politics</span>
+                <span class="tag link">Datawrapper</span>
               </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/tariff800/" target="_blank">American Consumers Cannot Afford Trump’s Trade Policy any Longer</a></p>
-                  <p class="subtitle is-6">A dive into how revocation of de minimis exemption affects those who can least afford. </p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">foreign affairs</span>
-                  <span class="tag is-warning is-light is-rounded">xml</span>
-                  <span class="tag is-light is-rounded">politics</span>
-                  <span class="tag is-link is-light is-rounded">Datawrapper</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://yatingw24.github.io/tariff800/" class="card-footer-item">Story</a>
-              </footer> 
-              
+            </div>
+            <div class="card-footer">
+              <a href="https://yatingw24.github.io/tariff800/" class="card-footer-item">Story</a>
             </div>
           </div>
-          <!-- <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/marrigae.jpg" alt="Description of the image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://a-project-about-ages-at-marriagegunicorn.onrender.com/" target="_blank">Age at First Marriage Across Countries</a></p>
-                  <p class="subtitle is-6">An interactive web application to explore gender differences in the age at first marriage across different countries.</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">Python/Pandas</span>
-                  <span class="tag is-light is-rounded">flask</span>
-                  <span class="tag is-warning is-light is-rounded">interactive web app</span>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://github.com/yatingw24/marriage-age-web-interface" class="card-footer-item">Code</a>
-              </footer>   
-            </div>
-          </div> -->
+        </div>
       </section>
 
       <section class="content">
         <h3>Visual Reporting using <span class="verb-bold">Datawrapper/Rawgraphs/R Studio/D3</span> and <span class="verb-bold">cleaned in Illustrator</span>.</h3>
 
-        <div class="columns is-multiline">
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/statemap.jpg" alt="An Analaysis about Underpaid PhD Students">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/phd_map/">The Silent Crisis of Non-Stem PhD Students</a></p>
-                  <p class="subtitle is-6">A visual story about the financial hardship of PhD students in Non-traditional science disciplines.</p>
-                </div>
-                <div class="tags">
-                  <span class="tag is-success is-light is-rounded">topoJson</span>
-                  <span class="tag is-warning is-light is-rounded">D3</span>
+        <div class="grid">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/400x300/8e44ad/ffffff?text=PhD+Students" alt="An Analysis about Underpaid PhD Students">
+            </div>
+            <div class="card-content">
+              <p class="card-title"><a href="https://yatingw24.github.io/phd_map/">The Silent Crisis of Non-Stem PhD Students</a></p>
+              <p class="card-subtitle">A visual story about the financial hardship of PhD students in Non-traditional science disciplines.</p>
+              <div class="tags">
+                <span class="tag success">topoJson</span>
+                <span class="tag warning">D3</span>
               </div>
             </div>
           </div>
         </div>
-
-      </section>
-    
-      <section class="content">
-        <h3>Original pieces that I <span class="verb-bold">wrote</span> and <span class="verb-bold">reported.</span></h3>
-        <h3></h3>
-        <div class="columns is-multiline">
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/harlem.jpg" alt="Description of the image">
-                </figure>                
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://theuptowner.org/harlem-group-continues-to-oppose-columbias-expansion/" target="_blank">Harlem Goup Continues to Oppose Columbia’s Expansion</a></p>
-                    <p class="subtitle is-6">At a community action meeting, West Harlem activists discuss potential actions to stop further development.
-                    </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/NYP.jpg" alt="Description of the image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://theuptowner.org/hospital-plans-to-close-only-rehab-unit-serving-washington-heights-and-inwood/" target="_blank">Hospital Plans to Close Only Rehab Unit Serving Washington Heights and Inwood</a></p>
-                  <p class="subtitle is-6">A NewYork-Presbyterian proposal to convert its 16-bed rehabilitation unit to general medical-surgical beds prompts dissent.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/Saint_omer.jpg" alt="Description of the image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://www.bcheights.com/2023/02/12/saint-omer-review/" target="_blank">‘Saint Omer’ Touches on Motherhood’s Complicated Nature</a></p>
-                  <p class="subtitle is-6">A movie review on a semi-documentary French production nominated for Best International Feature Film at the 95th Academy Awards</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="images/apple.jpg" alt="Description of the image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media-content">
-                  <p class="title is-4"><a href="https://yatingw24.github.io/Apple/" target="_blank">How Apple’s Software Strategy Leaves Users Behind</a></p>
-                  <p class="subtitle is-6">A commentary on Apple's planned obsolescence in the guise of a concern for user privacy.</p>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="https://theuptowner.org/a-96-million-federal-grant-will-expand-inwood-greenway/" class="card-footer-item">Story</a>
-              </footer>
-              
-            </div>
-          </div>
-        
       </section>
     </div>
-  </body>
+</body>
 </html>
-
-          
-
-
